@@ -10,7 +10,8 @@
 ### Manuales
 
 * [Documentación técnica](techdoc.md)
-    * [Manual de instalación](techdoc/install.md)
+    * [Instalación de servidor de Base de Datos e Indexado](techdoc/install_db.md)
+    * [Instalación de servidor de Front-end](techdoc/install_front.md)
     * [Manual de actualización](techdoc/upgrade.md)
     * [Información para desarrolladores](techdoc/developers.md)
 * [Documentación para usuarios](userdoc.md)
