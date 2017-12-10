@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introducción | Repositorio Digital del Patrimonio Cultural de México</title>
+        <title>Instalación de servidor de Front-end | Repositorio Digital del Patrimonio Cultural de México</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Documentación asociada al Repositorio Digital del Patrimonio Cultural de México">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
         
         
@@ -15,21 +15,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
-    <link rel="stylesheet" href="gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
-        
-    
-        
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
         
     
     
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./techdoc/install_db.html" />
+    <link rel="next" href="../techdoc/developers.html" />
     
+    
+    <link rel="prev" href="../techdoc/install_db.html" />
     
 
         
@@ -46,7 +48,7 @@
     <body>
         
         
-    <div class="book" data-level="0" data-chapter-title="Introducción" data-filepath="README.md" data-basepath="." data-revision="Sun Dec 10 2017 10:53:02 GMT-0600 (CST)">
+    <div class="book" data-level="2.2" data-chapter-title="Instalación de servidor de Front-end" data-filepath="techdoc/install_front.md" data-basepath=".." data-revision="Sun Dec 10 2017 10:53:02 GMT-0600 (CST)">
     
 
 <div class="book-summary">
@@ -61,10 +63,10 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
-                    <a href="./index.html">
+                    <a href="../index.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -112,7 +114,7 @@
         <li class="chapter " data-level="2.1" data-path="techdoc/install_db.html">
             
                 
-                    <a href="./techdoc/install_db.html">
+                    <a href="../techdoc/install_db.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -124,10 +126,10 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="techdoc/install_front.html">
+        <li class="chapter active" data-level="2.2" data-path="techdoc/install_front.html">
             
                 
-                    <a href="./techdoc/install_front.html">
+                    <a href="../techdoc/install_front.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -149,7 +151,7 @@
         <li class="chapter " data-level="2.4" data-path="techdoc/developers.html">
             
                 
-                    <a href="./techdoc/developers.html">
+                    <a href="../techdoc/developers.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -216,7 +218,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Repositorio Digital del Patrimonio Cultural de México</a>
+        <a href="../" >Repositorio Digital del Patrimonio Cultural de México</a>
     </h1>
 </div>
 
@@ -226,8 +228,40 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="repositorio-digital-del-patrimonio-cultural-de-m&#xE9;xico">Repositorio Digital del Patrimonio Cultural de M&#xE9;xico</h1>
-<p>Documentaci&#xF3;n asociada al Repositorio Digital del Patrimonio Cultural de M&#xE9;xico</p>
+                        <h1 id="instalaci&#xF3;n-del-servidor-de-frontend">Instalaci&#xF3;n del Servidor de Front-End</h1>
+<p>Las siguientes secciones indican el proceso para realizar la instalaci&#xF3;n y configuraci&#xF3;n de herramientas para el servidor de indexado y base de datos.</p>
+<h2 id="suposiciones">Suposiciones</h2>
+<p>El sistema operativo considerado en las instrucciones de instalaci&#xF3;n es CentOs 7.0. Se asume que est&#xE1; instalado sin UI puesto que ser&#xE1; administrado via terminal SSH.</p>
+<p>Se asume tambi&#xE9;n que el usuario que ejecuta la instalaci&#xF3;n cuenta con permisos de sudoer.</p>
+<p>Se asume conocimiento en administraci&#xF3;n del CMS SemanticWebBuilder.</p>
+<h2 id="instalaci&#xF3;n-de-prerequisitos">Instalaci&#xF3;n de pre-requisitos</h2>
+<h3 id="java-development-kit">Java Development Kit</h3>
+<p>El JDK de Java es erquerido para instalar el software de base. Se recomienda utilizar la distribuci&#xF3;n de Oracle.</p>
+<p>Ejecute los siguientes comandos:</p>
+<pre><code>sudo yum update
+cd ~
+wget --no-cookies --no-check-certificate --header &quot;Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie&quot; \
+&quot;http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.rpm&quot;
+</code></pre><p>Esto descargar&#xE1; el paquete de instalaci&#xF3;n. Una vez conclu&#xED;da la descarga ejecute los siguientes comandos:</p>
+<pre><code>sudo yum localinstall jdk-8u151-linux-x64.rpm
+rm jdk-8u151-linux-x64.rpm
+</code></pre><p>Compruebe la instalaci&#xF3;n ejecutando el comando <code>java --version</code>.</p>
+<h3 id="apache-tomcat-90">Apache Tomcat 9.0</h3>
+<pre><code>mkdir
+wget http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.2/bin/apache-tomcat-9.0.2.tar.gz
+tar -xvzf apache-tomcat-9.0.2.tar.gz
+sudo mv apache-tomcat-9.0.2.tar.gz /opt/tomcat
+</code></pre><p>Lo anterior colocar&#xE1; el servidor de aplicaciones tomcat en la ruta <em>/opt</em>.</p>
+<h2 id="instalaci&#xF3;n-de-semanticwebbuilder">Instalaci&#xF3;n de SemanticWebBuilder</h2>
+<p>Para instalar SemanticWebBuilder, deber&#xE1; descargar el paquete correspondiente.</p>
+<pre><code>cd ~
+wget https://github.com/SemanticWebBuilder/SWB/releases/download/5.0/swb.war
+</code></pre><p>Este paquete ser&#xE1; desplegado en el servidor Tomcat. Para ello, copie el archivo WAR a la ruta <em>/opt/tomcat/webapps</em>, renombrando el archivo como ROOT.</p>
+<pre><code>sudo cp target/swb.war /opt/tomcat/webapps/ROOT.war
+</code></pre><p>Finalmente inicie el servidor Tomcat para iniciar la aplicaci&#xF3;n:</p>
+<pre><code>cd /opt/tomcat/bin
+sh start.sh &amp;
+</code></pre><p>SemanticWebBuilder responser&#xE1; en el puerto 8080.</p>
 
                     
                     </section>
@@ -238,29 +272,31 @@
         </div>
 
         
+        <a href="../techdoc/install_db.html" class="navigation navigation-prev " aria-label="Previous page: Instalación de servidor de Base de Datos e Indexado"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./techdoc/install_db.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Instalación de servidor de Base de Datos e Indexado"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="../techdoc/developers.html" class="navigation navigation-next " aria-label="Next page: Información para desarrolladores"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
+<script src="../gitbook/app.js"></script>
 
     
-    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
