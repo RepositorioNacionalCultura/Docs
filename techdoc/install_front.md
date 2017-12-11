@@ -32,13 +32,13 @@ rm jdk-8u151-linux-x64.rpm
 
 Compruebe la instalación ejecutando el comando <code>java --version</code>.
 
-### Apache Tomcat 9.0
+### Apache Tomcat 8.0
 
 ````
 mkdir
-wget http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.2/bin/apache-tomcat-9.0.2.tar.gz
-tar -xvzf apache-tomcat-9.0.2.tar.gz
-sudo mv apache-tomcat-9.0.2.tar.gz /opt/tomcat
+wget http://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz
+tar -xvzf apache-tomcat-8.5.24.tar.gz
+sudo mv apache-tomcat-8.5.24.tar.gz /opt/tomcat
 ````
 Lo anterior colocará el servidor de aplicaciones tomcat en la ruta _/opt_.
 
