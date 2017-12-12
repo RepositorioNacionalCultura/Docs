@@ -75,7 +75,7 @@ Debido a que ElasticSearch sólo será accesible a través del API de indexado y
 
 En un ambiente productivo, deberá cofigurarse el nombre del nodo y del cluster de ElasticSearch. Se recomienda también utilizar una partición exclusiva para los datos en los índices.
 
-### Apache Tomcat 9.0
+### Apache Tomcat 8.5
 
 ````
 mkdir
